@@ -14,6 +14,7 @@
 
 body {
   background-color: dark light(rgb (37, 37, 37), #ececec);
+  font-family: Montserrat, sans-serif;
 }
 
 main{
@@ -29,6 +30,8 @@ section{
   display: flex;
   justify-content: space-between;
   width: 100%;
+  align-items: center;
+ 
 }
 
 ul{
@@ -43,21 +46,66 @@ ul{
 
 
 ul a {
-  color: dark light(rgb (37, 37, 37), #ececec);
+  color: #13a1da;
   font-family: var(--fonte--primaria);
   text-decoration: none;
   font-size: 1.25rem;
 }
 
 ul a:hover{
+  color: #e96f1d;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 3.5rem;
+
+}
+
+
+button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px;
+  border-style: double;
+  padding: 0.5rem;
+  width: 50%;
+  border-radius: 8px;
+  cursor: pointer;
+
+  
+
+}
+
+button:hover{
+  background: #84cce9;
+}
+
+
+button a {
   color: #13a1da;
+  text-decoration: none;
+}
+
+button a:hover{
+  color: rgb(0, 68, 255);
 }
 
 
 /* The switch - the box around the slider */
 #theme-toggle-button {
   display: flex;
-  align-self: center;
   font-size: 17px;
   position: relative;
   display: inline-block;
@@ -73,6 +121,9 @@ ul a:hover{
   align-items: center;
 
 }
+
+
+
 
 #container,
 #patches,
@@ -133,14 +184,67 @@ ul a:hover{
 .titulo_destaque{
   font-size: 2.25rem;
   font-family: var(--fonte--primaria);
+  padding-bottom: 2rem;
+  padding-top: 2rem;
 }
 
 .subtitulo{
   font-size: 1.25rem;
   font-family: var(--fonte--secundaria);
+  padding-bottom: 3.5rem;
+
 }
 
 #meus_projetos,
 .redes{
   text-align: center;
+  font-size: 1.5rem;
+}
+
+.repositorio{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding-bottom: 3.5rem;
+
+
+}
+
+
+.projeto {
+  display: flex;
+  border-radius: 4px;
+  box-shadow: 0 0 10px 0 rgba(203, 201, 201, 0.2);
+  box-sizing: border-box;
+  border-color: #ececec;
+  border-style: outset;
+  text-align: justify;
+
+}
+
+.projeto img{
+  width: 100%;
+}
+
+
+
+.projeto p{
+padding: 0.4rem;
+}
+
+.redes{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.links{
+  display: flex;
+  gap: 2rem;
+}
+
+strong{
+  color: aqua;
+  font-weight: 700;
 }
