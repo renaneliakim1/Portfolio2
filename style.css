@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  color-scheme: dark light;
+  --fonte--primaria:'Krona One', sans-serif;
+  --fonte--secundaria:'Montserrat', sans-serif;
+}
+
+body {
+  background-color: dark light(rgb (37, 37, 37), #ececec);
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5px 30px 5px 30px;
+  gap: 5rem;
+}
+
+section{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style-type: none;
+  gap: 1rem;
+  align-items: center;
+
+}
+
+
+ul a {
+  color: dark light(rgb (37, 37, 37), #ececec);
+  font-family: var(--fonte--primaria);
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+
+ul a:hover{
+  color: #13a1da;
+}
+
+
+/* The switch - the box around the slider */
+#theme-toggle-button {
+  display: flex;
+  align-self: center;
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  cursor: pointer;
+}
+
+/* Hide default HTML checkbox */
+#toggle {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  align-items: center;
+
+}
+
+#container,
+#patches,
+#stars,
+#button,
+#sun,
+#moon,
+#cloud {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.25s;
+}
+
+/* night sky background */
+#toggle:checked+svg #container {
+  fill: #2b4360;
+}
+
+/* move button to right when checked */
+#toggle:checked+svg #button {
+  transform: translate(28px, 2.333px);
+}
+
+/* show/hide sun and moon based on checkbox state */
+#sun {
+  opacity: 1;
+}
+
+#toggle:checked+svg #sun {
+  opacity: 0;
+}
+
+#moon {
+  opacity: 0;
+}
+
+#toggle:checked+svg #moon {
+  opacity: 1;
+}
+
+/* show or hide background items on checkbox state */
+#cloud {
+  opacity: 1;
+}
+
+#toggle:checked+svg #cloud {
+  opacity: 0;
+}
+
+#stars {
+  opacity: 0;
+}
+
+#toggle:checked+svg #stars {
+  opacity: 1;
+}
+
+.titulo_destaque{
+  font-size: 2.25rem;
+  font-family: var(--fonte--primaria);
+}
+
+.subtitulo{
+  font-size: 1.25rem;
+  font-family: var(--fonte--secundaria);
+}
+
+#meus_projetos,
+.redes{
+  text-align: center;
+}
