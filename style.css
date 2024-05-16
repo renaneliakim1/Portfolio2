@@ -15,7 +15,8 @@
 body {
   background-color: dark light(rgb (37, 37, 37), #ececec);
   font-family: Montserrat, sans-serif;
-}
+/*   word-break: break-all; 
+ */}
 
 main{
   display: flex;
@@ -39,7 +40,7 @@ ul{
   flex-direction: row;
   justify-content: space-between;
   list-style-type: none;
-  gap: 1rem;
+  gap: 5rem;
   align-items: center;
 
 }
@@ -73,6 +74,13 @@ ul a:hover{
 }
 
 
+.cv{
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  height: 4rem;
+}
+
 button{
   display: flex;
   justify-content: center;
@@ -96,12 +104,79 @@ button:hover{
 button a {
   color: #13a1da;
   text-decoration: none;
+  font-size: 1.75rem;
+  font-family: var(--fonte--primaria);
+
 }
 
 button a:hover{
   color: rgb(0, 68, 255);
 }
 
+.apresentacao{
+  display: flex;
+  flex-direction: row;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 1.5rem;
+  width: 50%;
+  height: 50%;
+
+}
+
+.apresentacao img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 80%;
+  border-radius: 8px;
+}
+
+
+.apresentacao__conteudo{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 1.5rem;
+  font-size: 1.25rem;
+  width: 50%;
+  height: 50%;
+}
+
+.text{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 50%;
+}
+
+.redes{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.links{
+  display: flex;
+  gap: 2rem;
+  transition: 500ms linear;
+
+}
+
+.links a:hover{
+  transform: scale(1.1);
+
+
+}
+
+strong{
+  color: aqua;
+  font-weight: 700;
+}
 
 /* The switch - the box around the slider */
 #theme-toggle-button {
@@ -199,6 +274,7 @@ button a:hover{
 .redes{
   text-align: center;
   font-size: 1.5rem;
+  padding-bottom: 1rem;
 }
 
 .repositorio{
@@ -219,6 +295,8 @@ button a:hover{
   border-color: #ececec;
   border-style: outset;
   text-align: justify;
+  width: 16rem;
+  height: 27rem;
 
 }
 
@@ -226,25 +304,14 @@ button a:hover{
   width: 100%;
 }
 
-
-
 .projeto p{
 padding: 0.4rem;
 }
 
-.redes{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: 3.5rem;
+a{
+  text-decoration: none;
 }
 
-.links{
-  display: flex;
-  gap: 2rem;
-}
-
-strong{
-  color: aqua;
-  font-weight: 700;
+.mais:hover{
+  color: #e96f1d;
 }
