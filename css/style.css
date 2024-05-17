@@ -14,8 +14,8 @@
   --text-color-dark: #ffffff;
 
 
-  --fonte--primaria:'Krona One', sans-serif;
-  --fonte--secundaria:'Montserrat', sans-serif;
+  --fonte--primaria: 'Krona One', sans-serif;
+  --fonte--secundaria: 'Montserrat', sans-serif;
 }
 
 body {
@@ -24,7 +24,7 @@ body {
   color: var(--text-color-light);
   transition: background-color 0.3s, color 0.3s;
 
-/*   word-break: break-all; 
+  /*   word-break: break-all; 
  */
 }
 
@@ -33,7 +33,7 @@ body.dark-mode {
   color: var(--text-color-dark);
 }
 
-main{
+main {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,25 +41,25 @@ main{
   gap: 5rem;
 }
 
-section{
+section {
   display: flex;
   justify-content: space-between;
   width: 100%;
   align-items: center;
   position: sticky;
-  top: 0px;  
+  top: 0px;
   background-color: var(--background-color-light);
 
-  
+
   height: 2.5rem;
-  
+
 }
 
-.dark-mode section{
+.dark-mode section {
   background-color: var(--background-color-dark);
 }
 
-ul{
+ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -77,11 +77,11 @@ ul a {
   font-size: 1rem;
 }
 
-ul a:hover{
+ul a:hover {
   color: #e96f1d;
 }
 
-.container{
+.container {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -89,7 +89,7 @@ ul a:hover{
   padding: 5px 30px 5px 30px;
 }
 
-.icones{
+.icones {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,7 +99,7 @@ ul a:hover{
 }
 
 
-.download{
+.download {
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -107,6 +107,7 @@ ul a:hover{
   width: 40%;
   height: 4rem;
 }
+
 /* 
 button{
   display: flex;
@@ -140,7 +141,7 @@ button a:hover{
   color: rgb(0, 68, 255);
 }
  */
-.apresentacao{
+.apresentacao {
   display: flex;
   flex-direction: row;
   padding-left: 5%;
@@ -151,7 +152,7 @@ button a:hover{
 
 }
 
-.apresentacao img{
+.apresentacao img {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -161,14 +162,14 @@ button a:hover{
 }
 
 
-.img_perfil{
+.img_perfil {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 
-.apresentacao__conteudo{
+.apresentacao__conteudo {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -181,14 +182,14 @@ button a:hover{
   padding-bottom: 1.5rem;
 }
 
-.text{
+.text {
   display: flex;
   flex-direction: column;
   width: 50%;
   height: 50%;
 }
 
-.redes{
+.redes {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -198,20 +199,20 @@ button a:hover{
   padding-bottom: 1rem;
 }
 
-.links{
+.links {
   display: flex;
   gap: 2rem;
   transition: 500ms linear;
 
 }
 
-.links a:hover{
+.links a:hover {
   transform: scale(1.1);
 
 
 }
 
-strong{
+strong {
   color: aqua;
   font-weight: 700;
 }
@@ -222,7 +223,7 @@ strong{
   font-size: 17px;
   position: relative;
   display: inline-block;
-  width: 2em;
+  width: 3em;
   cursor: pointer;
 }
 
@@ -296,27 +297,27 @@ strong{
   opacity: 1;
 }
 
-.titulo_destaque{
+.titulo_destaque {
   font-size: 2.25rem;
   font-family: var(--fonte--primaria);
   padding-bottom: 2rem;
   padding-top: 2rem;
 }
 
-.subtitulo{
+.subtitulo {
   font-size: 1.25rem;
   font-family: var(--fonte--secundaria);
   padding-bottom: 3.5rem;
 
 }
 
-#meus_projetos{
+#meus_projetos {
   text-align: center;
   font-size: 1.5rem;
   padding-bottom: 1rem;
 }
 
-.repositorio{
+.repositorio {
   display: flex;
   flex-direction: row;
   gap: 2rem;
@@ -330,7 +331,7 @@ strong{
   display: flex;
   box-shadow: 0 0 10px 0 rgba(203, 201, 201, 0.8);
   box-sizing: border-box;
-/*   border-color: #ececec;
+  /*   border-color: #ececec;
  
   border-style: outset; */
   text-align: justify;
@@ -346,79 +347,85 @@ strong{
   transform: scale(1.05);
 }
 
-.projeto img{
+.projeto img {
   width: 100%;
   height: 50%;
 }
 
-.projeto p{
-padding-top: 1rem;
-padding-left: 0.5rem;
-padding-right: 0.5rem;
-font-size: 0.8rem;
+.projeto p {
+  padding-top: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-size: 0.8rem;
 
 
 }
 
-a{
+a {
   text-decoration: none;
   color: var(--text-color-dark), var(--text-color-light);
   font-family: var(--fonte--secundaria)
-
 }
 
-.mais:hover{
+.mais:hover {
   color: #e96f1d;
 }
 
 
 
 
+
+
+
+/* estilização para button de download  de curriculo e certificado*/
 .button {
   --width: 10rem;
   --height: 35px;
- /*  --tooltip-height: 35px;
+  --tooltip-height: 35px;
   --tooltip-width: 90px;
-  --gap-between-tooltip-to-button: 18px; */
+  --gap-between-tooltip-to-button: 18px;
   --button-color: #1163ff;
-/*   --tooltip-color: #fff;
- */  width: var(--width);
+  --tooltip-color: #fff;
+ 
+  width: var(--width);
   height: var(--height);
   background: var(--button-color);
   position: relative;
   text-align: center;
   border-radius: 0.45em;
-  font-family: Montserrat, sans-serif;;
+  font-family: Montserrat, sans-serif;
+  ;
   transition: background 0.3s;
-  z-index: -1;
 }
 
-.button::before {
+/* .button::before {
   position: absolute;
-/*   content: attr(data-tooltip);
-  width: var(--tooltip-width); */
-/*   height: var(--tooltip-height);
-  background-color: var(--tooltip-color); */
+  content: attr(data-tooltip);
+  width: var(--tooltip-width);
+  height: var(--tooltip-height);
+  background-color: var(--tooltip-color);
   font-size: 0.9rem;
   color: #111;
   border-radius: .25em;
-/*   line-height: var(--tooltip-height);
- */ /*  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
-  left: calc(50% - var(--tooltip-width) / 2); */
-}
+  line-height: var(--tooltip-height);
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+  left: calc(50% - var(--tooltip-width) / 2);
+  
+} */
 
-.button::after {
+/* .button::after {
   position: absolute;
   content: '';
   width: 0;
   height: 0;
   border: 10px solid transparent;
-/*   border-top-color: var(--tooltip-color);
- */  left: calc(50% - 10px);
+  border-top-color: var(--tooltip-color);
+ 
+  left: calc(50% - 10px);
   bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
-}
+} */
 
-.button::after,.button::before {
+.button::after, .button::before {
   opacity: 0;
   visibility: hidden;
   transition: all 0.5s;
@@ -430,7 +437,7 @@ a{
   justify-content: center;
 }
 
-.button-wrapper,.text,.icon {
+.button-wrapper, .text, .icon {
   overflow: hidden;
   position: absolute;
   width: 100%;
@@ -443,7 +450,7 @@ a{
   top: 0
 }
 
-.text,.icon {
+.text, .icon {
   transition: top 0.5s;
 }
 
@@ -472,7 +479,7 @@ a{
   top: 0;
 }
 
-.button:hover:before,.button:hover:after {
+.button:hover:before, .button:hover:after {
   opacity: 1;
   visibility: visible;
 }
