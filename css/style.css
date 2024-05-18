@@ -309,29 +309,26 @@ body.dark-mode ul a:hover {
 
 .apresentacao {
   display: flex;
-  flex-direction: row;
-  padding-left: 5%;
-  padding-right: 5%;
+  flex-direction: column;
+  padding-left: 10%;
+  padding-right: 10%;
   padding-top: 1.5rem;
-  width: 80%;
   height: 50%;
 
 }
 
-.apresentacao img {
+
+.img-perfil {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90%;
-  height: 90%;
-  border-radius: 8px;
 }
 
-
-.img_perfil {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.img-perfil img{
+  width: 46%;
+  height: 50%;
+  border-radius: 8px;
+ 
 }
 
 
@@ -339,11 +336,10 @@ body.dark-mode ul a:hover {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
   padding-top: 1.5rem;
   font-size: 1.25rem;
-  width: 50%;
   height: 50%;
   padding-bottom: 1.5rem;
   font-family: var(--fonte--secundaria);
@@ -371,10 +367,27 @@ body.dark-mode strong {
 form {
   display: flex;
   flex-direction: column;
+  padding-top: 20px;
+  justify-content: center;
+  gap: 2rem;
+
+}
+
+
+.mensagem{
+  display: flex;
+  flex-direction: row;
   gap: 1rem;
   padding-top: 20px;
   justify-content: center;
+  align-items: center;
+}
 
+
+.mensagem-text-input{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem
 }
 
 .input-box {
@@ -409,6 +422,8 @@ textarea {
 
 
 }
+
+
 
 
 
@@ -606,6 +621,7 @@ body.dark-mode .animated-button:active {
   font-size: 1.25rem;
   font-family: var(--fonte--secundaria);
   padding-bottom: 2rem;
+  text-align: justify;
 
 }
 
