@@ -723,6 +723,7 @@ body.dark-mode footer p{
     display: flex;
     justify-content: space-between;
     
+    
 
   }
   
@@ -765,6 +766,7 @@ body.dark-mode footer p{
 
   .container{
     padding: 0px;
+    padding-top: 3rem;
   }
 
   .icones img{  
