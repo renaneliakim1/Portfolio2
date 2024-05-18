@@ -26,12 +26,9 @@ body {
   color-scheme: light dark;
   background-color: var(--background-color-dark);
   color: var(--text-color-dark);
-
   transition: background-color 0.3s, color 0.3s;
   font-family: var(--fonte--secundaria);
 
-  /*   word-break: break-all; 
- */
 }
 
 body.dark-mode {
@@ -46,9 +43,10 @@ main {
   align-items: center;
   flex-direction: column;
   gap: 5rem;
+  width: 100%;
 }
 
-section {
+header {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -57,51 +55,80 @@ section {
   top: 0px;
   transition: background-color 0.3s, color 0.3s;
   background-color: var(--background-color-dark);
-
-  z-index: 1;
-
-
-
-
+  z-index: 9999999;
   height: 2.5rem;
-
 }
 
-.dark-mode section {
+.dark-mode header {
   background-color: var(--background-color-light);
 
 }
 
-ul {
+header img {
+  height: 40px;
+}
+
+.menu-toggle {
+  font-size: 32px;
+  background: none;
+  border: none;
+  color: white;
+  display: none; /* esconder o botão de menu */
+  margin: 12px;
+
+}
+
+
+body.dark-mode .menu-toggle {
+  color: #e96f1d;
+}
+
+nav {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  list-style-type: none;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
   gap: 5rem;
-  align-items: center;
+  margin: 0;
+  padding: 0;
+
+}
+
+.menu a {
+  color: #13a1da;
+  text-decoration: none;
+  font-family: var(--fonte--primaria);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+body.dark-mode .menu a {
+  color: #e96f1d;
   font-weight: 700;
 
 }
 
-
-ul a {
-  color: #13a1da;
-  font-family: var(--fonte--primaria);
-  text-decoration: none;
-  font-size: 1rem;
-}
-
-ul a:hover {
+.menu a:hover {
   color: #e96f1d;
 }
 
-
-body.dark-mode ul a {
-  color: #e96f1d;
+body.dark-mode .menu a:hover {
+  color: #13a1da;
 }
 
-body.dark-mode ul a:hover {
-  color: #13a1da;
+
+.menu.open{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: var(--background-color-dark);
+}
+
+body.dark-mode .menu.open {
+  background-color: var(--background-color-light);
 }
 
 
@@ -215,9 +242,6 @@ body.dark-mode ul a:hover {
   height: 4rem;
 }
 
-
-
-
 /* estilização para button de download  de curriculo e certificado*/
 .button {
   --width: 15rem;
@@ -237,21 +261,18 @@ body.dark-mode ul a:hover {
   transition: background 0.3s;
 }
 
+body.dark-mode .button{
+  --button-color:  #f1670b;
+  --tooltip-color: #fff;
+}
+
+
 
 .button::after, .button::before {
   opacity: 0;
   visibility: hidden;
   transition: all 0.5s;
 }
-/* 
-.text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 0
-
-  
-} */
 
 .button-wrapper, .text, .icon {
   overflow: hidden;
@@ -260,6 +281,11 @@ body.dark-mode ul a:hover {
   height: 100%;
   left: 0;
   color: #fff;
+}
+
+body.dark-mode .button-wrapper, .text, .icon{
+  color: #fff;
+  font-weight: 700;
 }
 
 .text, .icon {
@@ -304,9 +330,6 @@ body.dark-mode ul a:hover {
   bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
 }
 
-
-
-
 .apresentacao {
   display: flex;
   flex-direction: column;
@@ -314,7 +337,6 @@ body.dark-mode ul a:hover {
   padding-right: 10%;
   padding-top: 1.5rem;
   height: 50%;
-
 }
 
 
@@ -328,7 +350,6 @@ body.dark-mode ul a:hover {
   width: 46%;
   height: 50%;
   border-radius: 8px;
- 
 }
 
 
@@ -418,14 +439,7 @@ textarea {
   color: black;
   font-family: var(--fonte--secundaria);
   width: 100%;
-
-
-
 }
-
-
-
-
 
 /* Estilização do botão de enviar mensagem */
 
@@ -434,7 +448,6 @@ textarea {
   justify-content: center;
   align-items: center;
 }
-
 
 .animated-button {
   width: 15rem;
@@ -458,15 +471,12 @@ textarea {
   font-family: var(--fonte--secundaria);
 }
 
-
-
 body.dark-mode .animated-button {
   color: #e96f1d;
   box-shadow: 0 0 0 2px #e96f1d;
   cursor: pointer;
   overflow: hidden;
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-
 }
 
 .animated-button svg {
@@ -476,8 +486,6 @@ body.dark-mode .animated-button {
   z-index: 9;
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
-
-
 
 body.dark-mode .animated-button svg {
   fill: black;
@@ -508,7 +516,6 @@ body.dark-mode .animated-button .circle {
   background-color: #e96f1d;
 }
 
-
 .animated-button .text {
   position: relative;
   z-index: 1;
@@ -516,7 +523,6 @@ body.dark-mode .animated-button .circle {
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 
 }
-
 
 body.dark-mode .animated-button .text {
   color: black;
@@ -605,10 +611,7 @@ body.dark-mode .animated-button:active {
 .links a:hover {
   transform: scale(1.1);
 
-
 }
-
-
 
 .titulo_destaque {
   font-size: 2.25rem;
@@ -636,8 +639,6 @@ body.dark-mode .animated-button:active {
   flex-direction: row;
   gap: 2rem;
   padding-bottom: 7.5rem;
-
-
 }
 
 
@@ -645,9 +646,6 @@ body.dark-mode .animated-button:active {
   display: flex;
   box-shadow: 0 0 10px 0 rgba(203, 201, 201, 0.8);
   box-sizing: border-box;
-  /*   border-color: #ececec;
- 
-  border-style: outset; */
   text-align: justify;
   width: 16rem;
   height: 27rem;
@@ -686,11 +684,6 @@ a {
 }
 
 
-
-
-
-
-
 footer {
   position: relative;
   width: 100%;
@@ -701,6 +694,10 @@ footer {
   align-items: center;
 }
 
+body.dark-mode footer {
+  background-color: #e96f1d;
+}
+
 footer img {
   width: 5rem;
   height: 5rem;
@@ -709,5 +706,109 @@ footer img {
 footer p {
   color: #B9B9B9;
   font-family: var(--fonte--secundaria);
+  font-weight: 500;
+  padding-bottom: 1rem;
+
+}
+
+
+body.dark-mode footer p{
+  color: #ffffff;
+  font-weight: 500;
+
+}
+
+@media  (width <= 768px) {
+  header{
+    display: flex;
+    justify-content: space-between;
+    
+
+  }
+  
+  #logo{
+    display: none;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #333;
+    gap: 1rem;
+    border: white 1px solid;
+    border-radius: 4px;
+    width: 80%;
+    padding: 1rem;
+  }
+
+  body.dark-mode .menu {
+    border: var(--background-color-dark) 1px solid;
+    border-radius: 4px;
+    width: 80%;
+    padding: 1rem;  
+  }
+
+
+  .menu-toggle {
+    display: block;
+   
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  .container{
+    padding: 0px;
+  }
+
+  .icones img{  
+    width: 4rem;
+
+  }
+
+  .button {
+    --width: 10rem;
+    --height: 4rem;
+  }
+
+  form{
+    display: flex;
+    padding: 5%;
+  }
+
+  .mensagem{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .repositorio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    align-items: center;
+    padding-bottom: 2.5rem;
+    width: 100%;
+
+  }
+
+  .projeto{
+    width: 80%;
+  }
+
+
+  
+
+
+
+
+
+
 
 }

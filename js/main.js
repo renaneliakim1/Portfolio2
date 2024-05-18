@@ -9,8 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
             body.classList.remove('dark-mode');
         }
     });
-
-    // Optional: Persist theme choice in local storage
     if (localStorage.getItem('theme') === 'dark') {
         toggle.checked = true;
         body.classList.add('dark-mode');
@@ -18,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
         toggle.checked = false;
         body.classList.remove('dark-mode');
     }
-
     toggle.addEventListener('change', () => {
         if (toggle.checked) {
             body.classList.add('dark-mode');
