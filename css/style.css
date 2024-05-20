@@ -116,6 +116,16 @@ nav {
   font-weight: 700;
 }
 
+
+.option{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem;
+
+}
+
 body.dark-mode .menu a {
   color: #e96f1d;
   font-weight: 700;
@@ -294,13 +304,16 @@ body.dark-mode .button {
   --tooltip-color: #fff;
 }
 
-.button::after, .button::before {
+.button::after,
+.button::before {
   opacity: 0;
   visibility: hidden;
   transition: all 0.5s;
 }
 
-.button-wrapper, .text, .icon {
+.button-wrapper,
+.text,
+.icon {
   overflow: hidden;
   position: absolute;
   width: 100%;
@@ -309,12 +322,15 @@ body.dark-mode .button {
   color: #fff;
 }
 
-body.dark-mode .button-wrapper, .text, .icon {
+body.dark-mode .button-wrapper,
+.text,
+.icon {
   color: #fff;
   font-weight: 700;
 }
 
-.text, .icon {
+.text,
+.icon {
   transition: top 0.5s;
 }
 
@@ -343,7 +359,8 @@ body.dark-mode .button-wrapper, .text, .icon {
   top: 0;
 }
 
-.button:hover:before, .button:hover:after {
+.button:hover:before,
+.button:hover:after {
   opacity: 1;
   visibility: visible;
 }
@@ -794,27 +811,49 @@ body.dark-mode footer p {
 }
 
 
-@media (width <=768px) {
+@media (width <=920px) {
+  .menu {
+    gap: 1rem;
+  }
+
+  .svg-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+  }
+}
+
+
+
+@media (width <=776px) {
   header {
     display: flex;
     justify-content: space-between;
   }
 
-  .svg{
+  header img {
+    height: 25px;
+    margin: 7px;
+  }
+
+  .svg {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%
   }
 
-
-  .svg-icon{
+  .svg-icon {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 8rem;
   }
 
- /*  .header-menu {
+
+
+  /*  .header-menu {
     display: flex;
     flex-direction: row-reverse;
     gap: 5rem;
@@ -841,6 +880,10 @@ body.dark-mode footer p {
     border-radius: 4px;
     width: 80%;
     padding: 1rem;
+  }
+
+  #theme-toggle-button{
+    width: 3rem;
   }
 
   .menu-toggle {
@@ -922,7 +965,7 @@ body.dark-mode footer p {
     width: 80%;
   }
 
-  .apresentacao__conteudo__texto{
+  .apresentacao__conteudo__texto {
     text-align: justify;
   }
 }
