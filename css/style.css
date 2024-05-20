@@ -969,3 +969,31 @@ body.dark-mode footer p {
     text-align: justify;
   }
 }
+
+
+
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: white;
+}
+
+
+body.dark-mode::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: rgb(0, 0, 0);
+}
+
+body.dark-mode::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: rgb(255, 89, 0);
+}
