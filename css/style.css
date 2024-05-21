@@ -644,7 +644,29 @@ body.dark-mode .animated-button:active {
   font-size: 2.25rem;
   font-family: var(--fonte--primaria);
   padding-bottom: 2rem;
-  padding-top: 2rem;
+  padding-top: 2rem;  
+}
+
+.titulo_destaque strong {
+  color: aqua;
+  font-weight: 700;
+}
+
+.titulo_destaque::after{
+  content: "|";
+  animation: piscar 0.7s infinite;
+}
+
+@keyframes piscar{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
 }
 
 .subtitulo {
@@ -652,8 +674,10 @@ body.dark-mode .animated-button:active {
   font-family: var(--fonte--secundaria);
   padding-bottom: 2rem;
   text-align: justify;
-
 }
+
+
+
 
 #meus_projetos {
   text-align: center;
