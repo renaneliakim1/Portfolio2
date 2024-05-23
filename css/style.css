@@ -464,6 +464,7 @@ form {
   background-color: white;
   color: black;
   font-family: var(--fonte--secundaria);
+  border: none;
 }
 
 textarea {
@@ -475,6 +476,7 @@ textarea {
   color: black;
   font-family: var(--fonte--secundaria);
   width: 100%;
+  border: none;
 }
 
 /* Estilização do botão de enviar mensagem */
