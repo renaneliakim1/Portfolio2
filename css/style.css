@@ -732,6 +732,14 @@ a {
   color: #e96f1d;
 }
 
+
+.localizacao a{
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
+  align-items: center;
+}
+
 footer {
   position: relative;
   width: 100%;
